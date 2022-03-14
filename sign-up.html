@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        /* why not working? */
+        }
+        form {
+            padding: 50px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            margin: 10px;
+            max-width: 20%;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <form formaction="button">
+        <h2>Sign up</h2>
+        <input class="input-group input-group-outline mb-3" name="e" id="email" type="email" placeholder="Email">
+        <input class="input-group input-group-outline mb-3" name="p" id="password" type="password" placeholder="Password">
+        <button id="hi" type="button">Sign UP</button>
+    </form>
+
+    <button id="back">Back</button>
+    <script type="text/javascript">
+        document.getElementById("back").onclick = function () {
+            location.href = "index.html";
+        };
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="signup.js"></script>
+
+</body>
+</html>
